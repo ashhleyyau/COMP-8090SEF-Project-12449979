@@ -87,7 +87,7 @@ class system_GUI:
 
             # Polymorphism: get_selling_price()
             if isinstance(product, FreshFood):
-                type_display = "FreshFood"
+                type_display = "Fresh Food"
             elif isinstance(product, Groceries):
                 type_display = "Groceries"
             elif isinstance(product, Household):
@@ -128,7 +128,7 @@ class system_GUI:
         window.geometry("350x350")
 
         ttk.Label(window, text="Type:").grid(row=0, column=0, sticky=tk.W, padx=5, pady=5)
-        type_var = tk.StringVar(value="FreshFood")
+        type_var = tk.StringVar(value="Fresh Food")
         ttk.Combobox(window, textvariable=type_var, values=["FreshFood", "Groceries", "Household"]).grid(row=0, column=1)
 
         ttk.Label(window, text="Supplier:").grid(row=1, column=0, sticky=tk.W, padx=5, pady=5)
